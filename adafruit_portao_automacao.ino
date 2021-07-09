@@ -1,6 +1,12 @@
 // Automação de portão elétrico com ESP8266 e Adafruit IO MQTT-Broker
+// OBS.: Para carregar este script em seu ESP8266, é necessário instalar
+// as bibliotecas da Adafruit IO e do ESP8266.
+
 // Electric gate automation with ESP8266 and Adafruit IO MQTT-Broker
-// By: Matheus Peixeiro . Follow me: github.com/matheuspeixeiro
+// OBS.: To load this script on your ESP8266, you need to install the 
+// Adafruit IO and ESP8266 libraries.
+
+// By: Matheus Peixeiro . Follow me: github.com/matheuspeixeiro .
 
 #include "config.h"
 
@@ -29,9 +35,9 @@ void loop() {// processa as mensagens e mantem a conexão ativa
   }
 }
 
-void conectaBroker(){ // esta funcao conectará o ESP8266
+void conectaBroker(){
 
-  //conectando à nuvem adafruit io
+  //conectando à nuvem adafruit io mqtt-broker
   Serial.print("Conectando ao Adafruit IO");
   io.connect();
   while (io.status() < AIO_CONNECTED) {
@@ -41,7 +47,7 @@ void conectaBroker(){ // esta funcao conectará o ESP8266
   Serial.println(io.statusText()); // mostrar que foi conectado
   Serial.println("Setup concluído");
   
-  // instancia um handler para recepção da mensagem do feed L1 
+  // instancia um handler para recepção da mensagem do feed PORTAO
   feedPortao->onMessage(handlePortao);
 
   //obtendo valor atual:

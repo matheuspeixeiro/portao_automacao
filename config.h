@@ -1,10 +1,10 @@
 // Dados MQTT
-#define IO_USERNAME  "teuz007"
-#define IO_KEY       "aio_HSNC90hybJtPW8nKRHAIKNU0EcKq"
+#define IO_USERNAME  "ADAFRUIT_IO_USERNAME"
+#define IO_KEY       "ADAFRUIT_IO_KEY"
 
 // Dados Wi-Fi
-#define   WIFI_SSID   "peixeiro 2.4"
-#define   WIFI_PASS   "Ab034033"
+#define   WIFI_SSID   "SSID_WIFI"
+#define   WIFI_PASS   "PASSWORD_WIFI"
 
 // Dados para comunicação
 #include "AdafruitIO_WiFi.h"

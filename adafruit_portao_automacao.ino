@@ -1,4 +1,6 @@
-// controle portão de casa
+// Automação de portão elétrico com ESP8266 e Adafruit IO MQTT-Broker
+// Electric gate automation with ESP8266 and Adafruit IO MQTT-Broker
+// By: Matheus Peixeiro . Follow me: github.com/matheuspeixeiro
 
 #include "config.h"
 
